@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Facilities.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/api/[controller]")]
     public class FacilitiesController : ControllerBase
     {
         private readonly ILogger<FacilitiesController> _logger;
@@ -20,7 +20,7 @@ namespace Facilities.API.Controllers
 
         /// <summary>
         /// Endpoint that gets the facilities data and sends to another server <br/>
-        /// The endpoint will be like <code>https://your-domain-dot-com/Facilities/UpdateFacilities</code>
+        /// The endpoint will be like <code>https://your-domain-dot-com/api/Facilities/UpdateFacilities</code>
         /// </summary>
         /// <param name="facilityInfo"></param>
         /// <returns><see cref="StatusCodeResult"/> depending on the success or failure of this action method </returns>
