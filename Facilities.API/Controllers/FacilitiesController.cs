@@ -18,12 +18,28 @@ namespace Facilities.API.Controllers
             _logger = logger;
         }
 
-        [HttpPost]
-        public IActionResult Get()
+        /// <summary>
+        /// Endpoint that gets the facilities data and sends to another server <br/>
+        /// The endpoint will be like <code>https://your-domain-dot-com/Facilities/UpdateFacilities</code>
+        /// </summary>
+        /// <param name="facilityInfo"></param>
+        /// <returns><see cref="StatusCodeResult"/> depending on the success or failure of this action method </returns>
+        [HttpPost("UpdateFacilities")]
+        public IActionResult UpdateFacilities(IEnumerable<FacilityInfo> facilityInfo)
         {
-            return Ok();
+            //get the list of facility data
+            //update each facility data in the list with id**
+            //push to the server. Throw an error if something bad happens
+            return Ok(facilityInfo);
         }
 
+        /// <summary>
+        /// Models the facilities data
+        /// </summary>
+        /// <param name="Patient_Id"></param>
+        /// <param name="Name"></param>
+        /// <param name="Date_Created"></param>
+        /// <param name="Submissions"></param>
         public record FacilityInfo(long Patient_Id, string Name, DateTimeOffset Date_Created, bool Submissions);
     }
 }
