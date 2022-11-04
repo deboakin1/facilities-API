@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Monitor.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,13 +34,5 @@ namespace Facilities.API.Controllers
             return Ok(facilityInfo);
         }
 
-        /// <summary>
-        /// Models the facilities data
-        /// </summary>
-        /// <param name="Patient_Id"></param>
-        /// <param name="Name"></param>
-        /// <param name="Date_Created"></param>
-        /// <param name="Submissions"></param>
-        public record FacilityInfo(long Patient_Id, string Name, DateTimeOffset Date_Created, bool Submissions);
     }
 }
