@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facilities.API", "Facilities.API\Facilities.API.csproj", "{ECE19967-163B-4146-A5B3-011FF10A36CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facilities.API", "Facilities.API\Facilities.API.csproj", "{ECE19967-163B-4146-A5B3-011FF10A36CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor.WF", "Monitor.WF\Monitor.WF.csproj", "{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{ECE19967-163B-4146-A5B3-011FF10A36CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECE19967-163B-4146-A5B3-011FF10A36CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECE19967-163B-4146-A5B3-011FF10A36CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
