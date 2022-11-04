@@ -8,4 +8,5 @@
     /// <param name="Date_Created"></param>
     /// <param name="Submissions"></param>
     public record FacilityInfo(long PatientId, string Name, DateTime DateCreated, int Submissions);
+
 }
