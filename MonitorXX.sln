@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facilities.API", "Facilitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor.WF", "Monitor.WF\Monitor.WF.csproj", "{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor.Model", "Monitor.Model\Monitor.Model.csproj", "{3D917004-247E-4059-B031-19097CA0FC46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4372FD8-7F2D-452E-9495-A72EFAE5EA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D917004-247E-4059-B031-19097CA0FC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D917004-247E-4059-B031-19097CA0FC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D917004-247E-4059-B031-19097CA0FC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D917004-247E-4059-B031-19097CA0FC46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
