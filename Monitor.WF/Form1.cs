@@ -76,13 +76,13 @@ namespace Monitor.WF
                 while (reader.Read())
                 {
                     facilities.Add(
-                            new FacilityInfo
-                            (
-                                PatientId: Convert.ToInt64(reader["Patient_Id"]),
-                                Name: reader["Name"] is DBNull ? string.Empty : reader["Name"].ToString(),
-                                DateCreated: Convert.ToDateTime(reader["Date_Created"]),
-                                Submissions: Convert.ToInt16(reader["Submissions"])
-                            )
+                            new FacilityInfo()
+                            {
+                                PatientId = Convert.ToInt64(reader["Patient_Id"]),
+                                Name = reader["Name"] is DBNull ? string.Empty : reader["Name"].ToString(),
+                                DateCreated = Convert.ToDateTime(reader["Date_Created"]),
+                                Submissions = Convert.ToInt16(reader["Submissions"])
+                            }
                         );
                 }
                 reader.Close();
@@ -110,12 +110,12 @@ namespace Monitor.WF
                 {
                     donations.Add(
                             new FacilityInfo
-                            (
-                                PatientId: Convert.ToInt64(reader["Id"]),
-                                Name: reader["DonorId"].ToString(),
-                                DateCreated: DateTime.Parse(reader["CreatedOn"].ToString()),
-                                Submissions: Convert.ToInt16(reader["Status"])
-                            )
+                            {
+                                PatientId = Convert.ToInt64(reader["Id"]),
+                                Name = reader["DonorId"].ToString(),
+                                DateCreated = DateTime.Parse(reader["CreatedOn"].ToString()),
+                                Submissions = Convert.ToInt16(reader["Status"])
+                            }
                         );
                 }
                 reader.Close();
