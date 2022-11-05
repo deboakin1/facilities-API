@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Monitor.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Facilities.API.Controllers
 {
@@ -26,13 +25,34 @@ namespace Facilities.API.Controllers
         /// <param name="facilityInfo"></param>
         /// <returns><see cref="StatusCodeResult"/> depending on the success or failure of this action method </returns>
         [HttpPost("UpdateFacilities")]
-        public IActionResult UpdateFacilities(IEnumerable<FacilityInfo> facilityInfo)
+        public IActionResult UpdateFacilities(FacilityInfo[] facilityInfo)
         {
-            //get the list of facility data
+            if(!facilityInfo.Any())
+                return StatusCode(StatusCodes.Status204NoContent);
+
+            var updatedFacilities = UpdateFacilitiesId(facilityInfo);
             //update each facility data in the list with id**
             //push to the server. Throw an error if something bad happens
-            return Ok(facilityInfo);
+            return Ok(updatedFacilities);
         }
 
+        private IEnumerable<UpdatedFacilty> UpdateFacilitiesId(FacilityInfo[] facilityInfo)
+        {
+            var totalFacilities = facilityInfo.Length;
+
+            for (int index = 0; index < totalFacilities; index++)
+            {
+                var facility = facilityInfo[index];
+
+                yield return new UpdatedFacilty
+                {
+                    Id = index,
+                    Name = facility.Name,
+                    PatientId = facility.PatientId,
+                    Submissions = facility.Submissions,
+                    DateCreated = facility.DateCreated,
+                };
+            }
+        }
     }
 }

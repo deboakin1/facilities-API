@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Do_Work);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Monitor";
             this.ResumeLayout(false);
 
         }
